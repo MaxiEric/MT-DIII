@@ -9,6 +9,7 @@ def crearFuncion ( q , p ):
     m_col = 3
     print (n_filas)
     a = [[0] * m_col for i in range(n_filas)]
+    print("aaa"+str(a))
     count_pasos = 0
 
     for i in range (0,n_filas):
@@ -18,10 +19,14 @@ def crearFuncion ( q , p ):
         e2 = input("ingrese transicion Entrada: 1, Estado: "+q[i]+" : ")
         a[i][2] = e2
         count_pasos = i+1
+        print(str(i)+ "for del a"+str(a[i][0]))
+        print(str(i)+ "for del a[i][1]"+str(a[i][1]))
+        print(str(i)+ "for del a[i][2"+str(a[i][2]))
+
     print(tabulate(a,headers=['0', '1'], tablefmt='fancy_grid')) #imprimo la MT como tabla
     print("coutn_pasos"+ str(count_pasos))
     print("pasos por consola"+str(p) )
-    if p > count_pasos:
+    if p < count_pasos:
         print("La maquina termino en menos pasos")
         print("Cantidad de pasos"+str(count_pasos)+"pasos colocados por teclado:"+str(p))
     else:
