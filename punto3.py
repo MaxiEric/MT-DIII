@@ -19,9 +19,16 @@ def crearFuncion ( q , p ):
         e2 = input("ingrese transicion Entrada: 1, Estado: "+q[i]+" : ")
         a[i][2] = e2
         count_pasos = i+1
-        print(str(i)+ "for del a"+str(a[i][0]))
-        print(str(i)+ "for del a[i][1]"+str(a[i][1]))
-        print(str(i)+ "for del a[i][2"+str(a[i][2]))
+
+    cinta = []
+    cinta.append(0)
+    cinta.append(1)
+    print("cinta", str(cinta))
+    for j in range (0,len(cinta)):
+        if cinta[j] == 0:
+            print ("entro a la cinta cuando vale 0")
+        else:
+            print("cinta es 0")
 
     print(tabulate(a,headers=['0', '1'], tablefmt='fancy_grid')) #imprimo la MT como tabla
     print("coutn_pasos"+ str(count_pasos))
